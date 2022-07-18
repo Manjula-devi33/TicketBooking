@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <title>Ticket Booking</title>
+ <head>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+       
+        function display() { 
+             if(document.getElementById('one').checked) {
+               
+                alert('Ticket is created succesfully');  
+               
+            }
+
+             else if(document.getElementById('round').checked) {
+                if(document.getElementById('roj').value.length == 0) {
+                    alert('Kindly enter the value of Return of Journey'); 
+                } else {
+               
+                        alert('Ticket is created succesfully'); 
+                } 
+              
+            }
+             
+             else {
+                 document.getElementById("disp").innerHTML
+                     = alert("Kindly Check One way or Round trip Radio button");
+             }
+            
+         }
+         
+    </script>
+
+ </head>
+ <body>
+    <div class="container">
+    <li>
+    <img src="/ticketbooking.jpg" width="30%" height="50%" />
+    <img src="/ticketbooking1.png" width="30%" height="50%" />
+    <img src="/ticketbooking3.jpg" width="30%" height="50%" />
+    </li>
+    <div class="text-block">
+        <h1>Welcome to Ticket Booking System</h1>
+    </div>
+   </div>
+   <form action="" id="my_form">
+   <div class="butt">
+     <input type="radio" name="select" id="one" /> One Way
+     <input type="radio" name="select" id="round"  /> Round Trip
+   </div>
+   <div class = "inp">
+    <li>
+     From: <input type="text"  required />
+     To: <input type="text" required /> <br /> <br /> 
+    </li>
+    <li>
+     Passenger1: <input type="text" id="len" name="len" minlength="5" required />
+     passenger2: <input type="text" id="len" name="len" minlength="5" required /> <br /> <br /> 
+    </li>
+    </li>
+    <li>
+      Age for passenger1: <input type="number" />
+      Age for passenger2: <input type="number" />  <br /> <br />
+    </li>
+    <li>
+        Gender for Passenger1: <input type="radio" name="sex1" /> Male <br /> <br />
+                               <input type="radio" name="sex1" /> Female   <br /> <br /> <br />
+
+     </li>
+     Gender for Passenger2: <input type="radio" name="sex2" /> Male <br /> <br />
+                           <input type="radio" name="sex2" /> Female   <br /> <br /> <br />  
+     Date of Journey: <input type="date" required />  <br /> <br /> 
+     Return of Journey: <input type="date" id="roj" />  <br />  <br /> 
+     Email: <input type="email" required />  <br />  <br /> 
+     Mobile: <input type="number" required />  <br />   <br /> 
+     Address: <br /> 
+      <textarea name="address" rows="10" cols="30"></textarea> <br />  <br /> 
+      <button type = "button" onclick="display()"> Submit </button> 
+    </div>
+   </form>
+   <div id="disp" style=
+        "color:green; font-size:18px; font-weight:bold;">
+    </div> 
+   
+ </body>
+</html>
